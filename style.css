@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+/*
+CSS RESET
+*/
+
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+margin: 0;
+}
+/*
+3. Allow percentage-based heights in the application
+*/
+html, body {
+height: 100%;
+}
+/*
+6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+
+/*
+Design Styling
+*/
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    text-align: center;
+    /* 50% 100% background size helps in both images not overlapping each other at different zoom levels and screen sizes */
+    background: url(./images/bg-pattern-top.svg) left -15px top -400px / 50% 100% no-repeat, 
+                url(./images/bg-pattern-bottom.svg) right -15px bottom -400px / 50% 100% no-repeat,
+                hsl(185, 75%, 39%);
+}
+
+main{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+}
+
+header{
+    position: relative;
+    /* Margin value is 54px(size of bottom half of profile image with border) + 25px(actual space between elements) */
+    margin-bottom: 79px;
+}
+
+h1{
+    color: hsl(229, 23%, 23%);
+    display: inline;
+    font-size: 1.125rem;
+}
+
+span{
+    color: hsl(227, 10%, 46%);
+    margin-left: 5px;
+}
+
+p{
+    color: hsl(227, 10%, 46%);
+    font-size: 0.875rem;
+}
+
+h1 ~ p{
+    margin: 10px 0 25px;
+}
+
+.header-pattern{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.profile-pic{
+    border-radius: 50%;
+    border: 5px solid hsl(0, 0%, 100%);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+hr{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid hsl(0, 0%, 59%);
+}
+
+footer{
+    display: flex;
+    padding: 25px;
+    justify-content: space-between;
+}
+
+.stats{
+    flex: 1;
+}
+
+.stats h2{
+    color: hsl(229, 23%, 23%);
+    text-align: center;
+    font-size: 1.125rem;
+    margin-bottom: 5px;
+}
+
